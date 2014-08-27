@@ -10,7 +10,6 @@
 					<td><input name='Input' type='text' class='loginInput'></td>
 				</tr>
 				<tr>
-<<<<<<< HEAD
 					<td>Password:</td>
 					<td><input name="Password" type="password"></td>
 				</tr>
@@ -26,10 +25,8 @@
 						<a href='register.php' id='registrieren'>Registrieren</a>
 						<a href='#register' id='pwvergessen'>Passwort vergessen</a>
 					</td>
-=======
 					<td class='loginLabel'>Password:</td>
 					<td><input name='Password' type='password' class='loginInput'></td>
->>>>>>> d2d7f0376d1a9cda0802d40e9232c63b4eb38bd8
 				</tr>
 			</table>
 			<div id='controls'>
