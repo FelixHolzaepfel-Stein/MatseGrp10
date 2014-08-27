@@ -6,10 +6,9 @@ require ('../lib/Template.class.php');
 
 if(isset($_SESSION['logged_in'])){
 	header('Location:index.php');
-	}
-else {
+} else {
 	$tpl = new Template();
-	$tpl->display('templates/register.tpl');
+	$tpl->display('../templates/register.tpl');
 	if(isset($_POST['tmp'])){
 		if(User::userExists($_POST['Name']) && User::emailExists($_POST['Email'])){
 			if(User::userExists($_POST['Name'])){
@@ -21,4 +20,5 @@ else {
 			$_SESSION['error']= 'Name und Email bereits vergeben.';
 		}
 	}
+}
 ?>
