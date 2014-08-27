@@ -1,5 +1,5 @@
 <?php
-require './Database.class.php';
+require 'Database.class.php';
 
 class User{
 	public static function checkpasswordForuser($user,$password){
