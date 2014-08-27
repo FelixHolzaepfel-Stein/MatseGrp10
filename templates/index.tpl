@@ -21,6 +21,12 @@
 			<a href="logout.php">Abmelden</a>
 		</nav>
 		
-		<div id="content"></div>
+		<div id="divMain"></div>
+		<div id="divGame"></div>
+		<div id="divProfil"></div>
+		<div id="divMail"></div>
+		<div id="divAllianz"></div>
+		<div id="divRanking"></div>
+		<div id="divShop"></div>
 	</body>
 </html>
