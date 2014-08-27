@@ -1,0 +1,179 @@
+/* CSS-Stylesheet */
+/* Autoren: */
+
+
+
+
+/* Browser reset */
+
+*{
+         margin: 0;
+         padding: 0;
+         border: none;
+         font-weight: normal;
+         text-decoration: none;
+}
+
+
+/* ######## Allgemein ######## */
+
+
+body{
+  background-image: url(../img/bg.png);
+  font-family: verdana,sans-serif;
+  font-size: 1em;
+
+}
+
+
+#wrp{
+margin: 1.5em 2% 0 2%;
+width: 96%;
+
+}
+
+.headline{
+         text-align: center;
+         color: #555;
+         font-size: 2em;
+         margin-top: 1.5em;
+
+}
+
+/* ######## Header ######## */
+
+header{
+         background-color: #FC8D00;
+}
+
+nav{
+         margin-left: 20%;
+         height: auto;
+         width: 100%;
+         padding-top: 2em;
+         padding-bottom: 2em;
+
+}
+
+
+nav li{
+         padding-right: 4%;
+         display: inline;
+         color: #fff;
+}
+
+
+nav li a:link,  a:visited{
+         color: #fff;
+}
+
+nav li a:hover{
+         color: #EFD8B6;
+}
+
+
+/* ######## Content ######## */
+
+#content{
+         width: 100%;
+         background-color: #F9F9EF;
+         min-height: 10em;
+         margin-top: 1em;
+}
+
+
+/* ######## Footer ######## */
+
+footer{
+ background-color: #FC8D00;
+ height: 2em;
+ color: #fff;
+ text-align: center;
+ font-size: 0.8em;
+ padding-top: 0.5em;
+ padding-bottom: 0.5em;
+ margin-top: 1em;
+}
+
+/* ######## Formular ######## */
+
+
+
+.button{
+  width:100px;
+  background:#FC8D00;
+  display:block;
+  margin:0 auto;
+  margin-top:1%;
+  padding:10px;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+.button:hover{
+  background:#2288bb;
+}
+
+#login{
+  width:400px;
+  margin:0 auto;
+  margin-top:8px;
+  margin-bottom:2%;
+  transition:opacity 1s;
+  -webkit-transition:opacity 1s;
+}
+
+
+
+#login h1{
+  background:#FC8D00;
+  padding:20px 0;
+  font-size:140%;
+  font-weight:300;
+  text-align:center;
+  color:#fff;
+}
+
+form{
+  background:#F9F9EF;
+  padding:6% 4%;
+}
+
+form a:link, a:visited{
+color: #555;
+font-size: 0.8em;
+}
+
+form a:hover{
+color: #FC8D00;
+}
+
+input[type="text"],input[type="password"], input[type="email"], input[type="password1"], input[type="password2"]{
+  width:92%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-size:95%;
+  color:#555;
+}
+
+input[type="submit"]{
+  width:100%;
+  background:#FC8D00;
+  border:0;
+  padding:4%;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+input[type="submit"]:hover{
+  background:#D67F16;
+}
