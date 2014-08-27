@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 
 class User{
 	public static function checkpasswordForuser($user,$password){
