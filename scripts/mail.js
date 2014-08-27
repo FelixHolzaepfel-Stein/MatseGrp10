@@ -2,9 +2,15 @@ $(function() {
 	$('#mail').click(function () {
 					$.ajax('mail.php')
 						.done(function (data) { 
-							$('#content')
+							$('#divMail')
 								.empty()
 								.append(data);
+							$('#divMain').hide();	
+							$('#divAllianz').hide();
+							$('#divMail').hide();
+							$('#divProfil').hide();
+							$('#divRanking').hide();
+							$('#divShop').hide();
 						});
 				});
 });

@@ -2,9 +2,15 @@ $(function() {
 	$('#game').click(function () {
 					$.ajax('game.php')
 						.done(function (data) { 
-							$('#content')
+							$('#divGame')
 								.empty()
 								.append(data);
+							$('#divMain').hide();
+							$('#divAllianz').hide();
+							$('#divMail').hide();
+							$('#divProfil').hide();
+							$('#divRanking').hide();
+							$('#divShop').hide();
 						});
 				});
 });
