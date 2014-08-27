@@ -16,7 +16,7 @@
 			</table>
 			<div id='controls'>
 				<input type='submit' value='Einloggen' name='login' class='loginButton' >
-				<a href='#register' id='registrieren'>Registrieren</a>
+				<a href='register.php' id='registrieren'>Registrieren</a>
 				<a href='#register' id='pwvergessen'>Passwort vergessen</a>
 			</div>
 			<div id="errors">
