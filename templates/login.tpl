@@ -6,7 +6,7 @@
 			<table>
 				<tr>
 					<td>Benutzername/<br/>E-Mail-Adresse:</td>
-					<td><input name="Inputnput" type="text"></td>
+					<td><input name="Input" type="text"></td>
 				</tr>
 				<tr>
 					<td>Password:</td>
