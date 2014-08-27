@@ -1,1 +1,15 @@
 <!-- Stylesheet für unser Projekt -->
+
+<!-- Login -->
+	.loginLabel{
+		width:110px;
+		height: 40px;
+	}
+		
+	.loginButton{
+		width: 110px;
+	}
+
+	.loginInput{
+		width:200px;
+	}
