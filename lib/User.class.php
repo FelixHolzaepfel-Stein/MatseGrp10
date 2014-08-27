@@ -1,5 +1,5 @@
 <?php
-require 'Database.class.php';
+
 
 class User{
 	public static function checkpasswordForuser($user,$password){
@@ -8,7 +8,7 @@ class User{
 			$sth->bindParam(':input',$user);
 			$sth->execute();
 			$row = $sth->fetch();
-			if($password_verify($password,$row['password'])){
+			if(password_verify($password,$row['password'])){
 				return true;
 			} else {
 				return false;
@@ -18,7 +18,7 @@ class User{
 		public static function registerUser($user,$email,$password){
 			try {
 				$dbh = Database::getInstance();
-				$sth = $dbh->prepare('INSERT INTO user(`Name`, `password`, `email`) VALUES (:name,:pw,:email)');
+				$sth = $dbh->prepare('INSERT INTO benutzer(`Name`, `password`, `email`) VALUES (:name,:pw,:email)');
 				$sth->bindParam(':name', $user);
 				$sth->bindParam(':pw', password_hash($password, password_BCRYPT));
 				$sth->bindParam(':email', $email);
@@ -29,10 +29,15 @@ class User{
 			}
 		}
 		
+		public static function getNameByID($name){
+			$dbh = Database::getInstance();
+			$sth = $dbh->prepare('Select ID FROM benutzer WHERE ´Name´ = :name');
+		}
+		
 		public static function changepassword($user,$password){
 			try {
 				$dbh = Database::getInstance();
-				$sth = $dbh->prepare('UPDATE ´user´ SET password = :pw WHERE ´name´ = :name');
+				$sth = $dbh->prepare('UPDATE benutzer SET password = :pw WHERE ´name´ = :name');
 				$sth->bindParam(':name', $user);
 				$sth->bindParam(':pw', password_hash($password, password_BCRYPT));
 				$sth->execute();
