@@ -15,7 +15,7 @@
 				<tr>
 					<td><input type="hidden" name="tmp" value=1 ></td>
 					<td>
-						<input type="submit" value="login" name="login" >
+						<input type="submit" value="Login" name="login" >
 					</td>
 				</tr>
 				<tr>
