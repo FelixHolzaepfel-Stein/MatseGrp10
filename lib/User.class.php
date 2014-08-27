@@ -1,5 +1,5 @@
 <?php
-require './Database.class.php';
+//require 'Database.class.php';
 
 class User{
 	public static function checkpasswordForuser($user,$password){
@@ -8,7 +8,7 @@ class User{
 			$sth->bindParam(':input',$user);
 			$sth->execute();
 			$row = $sth->fetch();
-			if($password_verify($password,$row['password'])){
+			if(password_verify($password,$row['password'])){
 				return true;
 			} else {
 				return false;
