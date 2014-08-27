@@ -2,8 +2,8 @@
 	class Database{
 	
 		private static $dsn = 'mysql:dbname=projekt_db;host=127.0.0.1';
-		private static $$user='root';
-		private static $$password='';
+		private static $user='root';
+		private static $password='';
 		
 		private static $Instance = null;
 		
