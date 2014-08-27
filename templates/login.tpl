@@ -21,7 +21,7 @@
 				<tr>
 					<td></td>
 					<td>
-						<a href='#register' id='registrieren'>Registrieren</a>
+						<a href='register.php' id='registrieren'>Registrieren</a>
 						<a href='#register' id='pwvergessen'>Passwort vergessen</a>
 					</td>
 				</tr>
