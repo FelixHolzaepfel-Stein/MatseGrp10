@@ -17,5 +17,16 @@
 			
 			echo $htmlText;
 		}
+		
+		//Zum einfuegen in die Divs via ajax
+		public function getConvertedHtml($documentName){
+			$htmlText= file_get_contents($documentName);
+			
+				foreach($this->map as $key => $value){
+					$htmlText = str_replace($key, $value, $htmlText);
+				}
+			
+				return $htmlText;
+		}
 	}
 ?>
