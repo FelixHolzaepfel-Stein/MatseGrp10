@@ -29,9 +29,49 @@ class User{
 			}
 		}
 		
-		public static function getNameByID($name){
+		public static function getNameByID($id){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select ID FROM benutzer WHERE ´Name´ = :name');
+			$sth = $dbh->prepare('Select Name FROM benutzer WHERE ´ID´ = :id');
+			$sth->bindParam(':id',$id);
+			$sth->execute();
+			$row = $sth->fetch();
+			return $row['Name'];
+		}
+		
+		public static function getIDByInput($input){
+			$dbh = Database::getInstance();
+			$sth = $dbh->prepare('Select ID FROM benutzer where Name=:input or email=:input');
+			$sth->bindParam(':input',$input);
+			$sth->execute();
+			$row = $sth->fetch();
+			return $row['ID'];
+		}
+		
+		public static function getEmailByID($id){
+			$dbh = Database::getInstance();
+			$sth = $dbh->prepare('Select Email FROM benutzer WHERE ´ID´ = :id');
+			$sth->bindParam(':id',$id);
+			$sth->execute();
+			$row = $sth->fetch();
+			return $row['Email'];
+		}
+		
+		public static function getDescriptionByID($id){
+			$dbh = Database::getInstance();
+			$sth = $dbh->prepare('Select Description FROM benutzer WHERE ´ID´ = :id');
+			$sth->bindParam(':id',$id);
+			$sth->execute();
+			$row = $sth->fetch();
+			return $row['Description'];
+		}
+		
+		public static function getPointsByID($id){
+			$dbh = Database::getInstance();
+			$sth = $dbh->prepare('Select Points FROM benutzer WHERE ´ID´ = :id');
+			$sth->bindParam(':id',$id);
+			$sth->execute();
+			$row = $sth->fetch();
+			return $row['Points'];
 		}
 		
 		public static function changepassword($user,$password){
