@@ -13,14 +13,12 @@ else {
 	if(isset($_POST['tmp'])){
 		if(User::userExists($_POST['Name']) && User::emailExists($_POST['Email'])){
 			if(User::userExists($_POST['Name'])){
-			
-			User::registerUser($_POST['Name'],$_POST['Email'],$_POST['Password']);
-			}
-			else {
-			$_SESSION['error']= 'Name bereits vergeben.'
+				User::registerUser($_POST['Name'],$_POST['Email'],$_POST['Password']);
+			} else {
+				$_SESSION['error']= 'Name bereits vergeben.';
 			}
 		} else {
-			$_SESSION['error']= 'Name und Email bereits vergeben.'
+			$_SESSION['error']= 'Name und Email bereits vergeben.';
 		}
 	}
 ?>
