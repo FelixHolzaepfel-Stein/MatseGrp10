@@ -93,7 +93,9 @@ class User{
 			$sth = $dbh->prepare('Select count(*) FROM benutzer WHERE Name = :name');
 			$sth->bindParam(':name',$name);
 			$sth->execute();
-			if($sth->rowCount() > 0 ){
+			$row=$sth->fetch();
+			print_r($row);
+			if((int)$row['count(*)'] > 0 ){
 				return true;
 			}else{
 				return false;
@@ -105,7 +107,9 @@ class User{
 			$sth = $dbh->prepare('Select count(*) FROM benutzer WHERE email = :email');
 			$sth->bindParam(':email',$email);
 			$sth->execute();
-			if($sth->rowCount() > 0 ){
+			$row=$sth->fetch();
+			print_r($row);
+			if((int)$row['count(*)'] > 0 ){
 				return true;
 			}else{
 				return false;

@@ -29,6 +29,7 @@
 </div>
 
 <div id="output"></div>
+<div class="error">{$error}</div>
 
 </div>
 <!-- ende wrapper -->
