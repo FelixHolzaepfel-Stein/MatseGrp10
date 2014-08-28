@@ -6,7 +6,6 @@ require ('../lib/User.class.php');
 require ('../lib/Template.class.php');
 
 session_start();
-
 if(isset($_SESSION['logged_in'])){
 	header('Location:index.php');
 } else {
@@ -14,7 +13,7 @@ if(isset($_SESSION['logged_in'])){
 	$tpl = new Template();
 	$tpl->display('../templates/login.tpl');
 		if(isset($_SESSION['error']) && isset($_POST['tmp'])){
-			echo $_SESSION['error'];
+			echo ('<div class="error" >' . $_SESSION['error'] . '</div>');
 		}
 
 
@@ -22,10 +21,10 @@ if(isset($_SESSION['logged_in'])){
 	if(User::checkpasswordForuser($_POST['Input'],$_POST['Password'])){
 		$_SESSION['logged_in'] = true;
 		$_SESSION['id'] = User::getIDByInput($_POST['Input']);
+		
 		header('Location:index.php');
 	} else {
 		$_SESSION['error']='Benutzername/Password falsch eingegeben';
-		header('Location:login.php');
 	}
 	
 	} 
