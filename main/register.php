@@ -22,7 +22,7 @@ if(isset($_SESSION['logged_in'])){
 						if(User::registerUser($_POST['Name'],$_POST['Email'],$_POST['Password1'])){
 							header('Location:login.php');
 						} else {
-							echo 'Super Felix';
+						
 						}
 					} else {
 						$_SESSION['error']= 'Passwoerter sind ungleich.';

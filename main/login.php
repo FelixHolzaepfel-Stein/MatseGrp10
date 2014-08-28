@@ -11,10 +11,14 @@ if(isset($_SESSION['logged_in'])){
 } else {
 	
 	$tpl = new Template();
-	$tpl->display('../templates/login.tpl');
-		if(isset($_SESSION['error']) && isset($_POST['tmp'])){
-			echo ('<div class="error" >' . $_SESSION['error'] . '</div>');
+	if(isset($_SESSION['error']) && isset($_POST['tmp'])){
+			$tpl->assign( 'error',$_SESSION['error']);
 		}
+		else{
+			$tpl-> assign( 'error','');
+		}
+	$tpl->display('../templates/login.tpl');
+		
 
 
 	if(isset($_POST['tmp'])){
