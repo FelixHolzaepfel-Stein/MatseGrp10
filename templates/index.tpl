@@ -60,6 +60,18 @@
 	<div id="divAllianz"></div>
 		
 	<div id="divRanking">
+		<table>
+		<thead>
+		<tr>
+		<thead>Name</thead>
+		<thead>Punkte</thead>
+		</tr>
+		</thead>
+		<tbody id="rankingTable">
+		</tbody>
+		</table>
+
+
 		<div id="divInnerRanking">
 				<a id="backButton" href=""><</a>
 				<p id="pageNumber">1<p>
