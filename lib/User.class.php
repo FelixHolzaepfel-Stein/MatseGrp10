@@ -88,19 +88,6 @@ class User{
 			}
 		}
 		
-		public static function changeDescription($id, $description) {
-			try {
-				$dbh = Database::getInstance();
-				$sth = $dbh->prepare('UPDATE benutzer SET Description = :description WHERE ID = :id');
-				$sth->bindParam(':description', $description);
-				$sth->bindParam(':id', $id);
-				$sth->execute();
-				return true;
-			} catch (PDOException $e) {
-				return false;
-			}
-		}
-		
 		public static function userExists($name){
 			$dbh = Database::getInstance();
 			$sth = $dbh->prepare('Select count(*) FROM benutzer WHERE Name = :name');

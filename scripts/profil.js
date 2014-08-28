@@ -4,24 +4,13 @@ $(function() {
 						.done(function (data) { 
 							$('#divProfil')
 								.empty()
-								.append(data)
-								.show();
+								.append(data);
 							$('#divMain').hide();
 							$('#divAllianz').hide();
 							$('#divGame').hide();
 							$('#divMail').hide();
 							$('#divRanking').hide();
 							$('#divShop').hide();
-							
-							$('#changeDescBtn').click(function () {
-										$.post('profil.php', {changeDesc:$('#changeDescField').val()}, function (data) {
-												if (data == 'success') {
-													alert('Erfolgreich gespeichert.');
-												}
-											});		
-							});
 						});
 				});
-				
-	
 });
