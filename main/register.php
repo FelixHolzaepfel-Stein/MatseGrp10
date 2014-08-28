@@ -4,6 +4,7 @@ require ('../lib/User.class.php');
 
 require ('../lib/Template.class.php');
 
+session_start();
 if(isset($_SESSION['logged_in'])){
 	header('Location:index.php');
 } else {
@@ -14,11 +15,12 @@ if(isset($_SESSION['logged_in'])){
 			echo $_SESSION['error'];
 	}
 	if(isset($_POST['tmp'])){
-		if(User::userExists($_POST['Name']) && User::emailExists($_POST['Email'])){
-			if(User::userExists($_POST['Name'])){
-				if(User::emailExists($_POST['Email'])){
+		if(!User::userExists($_POST['Name']) && !User::emailExists($_POST['Email'])){
+			if(!User::userExists($_POST['Name'])){
+				if(!User::emailExists($_POST['Email'])){
 					if($_POST['Password1']===$_POST['Password2']){
 						User::registerUser($_POST['Name'],$_POST['Email'],$_POST['Password1']);
+						header('Location:login.php');
 					} else {
 						$_SESSION['error']= 'Passwoerter sind ungleich.';
 					}
