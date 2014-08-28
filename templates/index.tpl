@@ -37,6 +37,7 @@
          <li><a href="#allianz" id="allianz">Allianz</a></li>
          <li><a href="#ranking" id="ranking">Bestenliste</a></li>
          <li><a href="#shop" id="shop">Shop</a></li>
+		 <li><a href="logout.php">Abmelden</a></li>
 </nav>
 <!-- navi ende -->
 
