@@ -18,7 +18,7 @@ class User{
 		public static function registerUser($user,$email,$password){
 			try {
 				$dbh = Database::getInstance();
-				$sth = $dbh->prepare('INSERT INTO benutzer(`Name`, `password`, `email`) VALUES (:name,:pw,:email)');
+				$sth = $dbh->prepare('INSERT INTO benutzer(Name, password, email) VALUES (:name,:pw,:email)');
 				$sth->bindParam(':name', $user);
 				$sth->bindParam(':pw', password_hash($password, password_BCRYPT));
 				$sth->bindParam(':email', $email);
@@ -31,7 +31,7 @@ class User{
 		
 		public static function getNameByID($id){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select Name FROM benutzer WHERE ´ID´ = :id');
+			$sth = $dbh->prepare('Select Name FROM benutzer WHERE ID = :id');
 			$sth->bindParam(':id',$id);
 			$sth->execute();
 			$row = $sth->fetch();
@@ -49,7 +49,7 @@ class User{
 		
 		public static function getEmailByID($id){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select Email FROM benutzer WHERE ´ID´ = :id');
+			$sth = $dbh->prepare('Select Email FROM benutzer WHERE ID = :id');
 			$sth->bindParam(':id',$id);
 			$sth->execute();
 			$row = $sth->fetch();
@@ -58,7 +58,7 @@ class User{
 		
 		public static function getDescriptionByID($id){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select Description FROM benutzer WHERE ´ID´ = :id');
+			$sth = $dbh->prepare('Select Description FROM benutzer WHERE ID = :id');
 			$sth->bindParam(':id',$id);
 			$sth->execute();
 			$row = $sth->fetch();
@@ -67,7 +67,7 @@ class User{
 		
 		public static function getPointsByID($id){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select Points FROM benutzer WHERE ´ID´ = :id');
+			$sth = $dbh->prepare('Select Points FROM benutzer WHERE ID = :id');
 			$sth->bindParam(':id',$id);
 			$sth->execute();
 			$row = $sth->fetch();
@@ -77,7 +77,7 @@ class User{
 		public static function changepassword($user,$password){
 			try {
 				$dbh = Database::getInstance();
-				$sth = $dbh->prepare('UPDATE benutzer SET password = :pw WHERE ´name´ = :name');
+				$sth = $dbh->prepare('UPDATE benutzer SET password = :pw WHERE name = :name');
 				$sth->bindParam(':name', $user);
 				$sth->bindParam(':pw', password_hash($password, password_BCRYPT));
 				$sth->execute();
@@ -89,7 +89,7 @@ class User{
 		
 		public static function userExists($name){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select count(*) FROM user WHERE ´Name´ = :name');
+			$sth = $dbh->prepare('Select count(*) FROM user WHERE Name = :name');
 			$sth->bindParam(':name',$name);
 			$sth->execute();
 			$sth->storeResult();
@@ -102,7 +102,7 @@ class User{
 		
 		public static function emailExists($email){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select count(*) FROM user WHERE ´email´ = :email');
+			$sth = $dbh->prepare('Select count(*) FROM user WHERE email = :email');
 			$sth->bindParam(':email',$email);
 			$sth->execute();
 			$sth->storeResult();
