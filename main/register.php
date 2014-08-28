@@ -5,6 +5,7 @@ require ('../lib/User.class.php');
 require ('../lib/Template.class.php');
 
 session_start();
+print_r($_POST);
 if(isset($_SESSION['logged_in'])){
 	header('Location:index.php');
 } else {
@@ -37,7 +38,6 @@ if(isset($_SESSION['logged_in'])){
 	}
 	if(isset($_SESSION['error']) && isset($_POST['tmp'])){
 			$tpl->assign( 'error',$_SESSION['error']);
-			unset($_SESSION['error']);
 		}
 		else{
 			$tpl-> assign( 'error','');
