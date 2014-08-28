@@ -30,14 +30,14 @@
 
 <!-- navi beginn -->
 <nav ul>
-         <li><a href="#main" id="main">Startseite</a></li>
-         <li><a href="#game" id="game">Neues Spiel</a></li>
-         <li><a href="#profil" id="profil">Profil</a></li>
-         <li><a href="#mail" id="mail">Nachrichten</a></li>
-         <li><a href="#allianz" id="allianz">Allianz</a></li>
-         <li><a href="#ranking" id="ranking">Bestenliste</a></li>
-         <li><a href="#shop" id="shop">Shop</a></li>
-		 <li><a href="logout.php">Abmelden</a></li>
+         <li><span id="main">Startseite</span></li>
+         <li><span id="game">Neues Spiel</span></li>
+         <li><span id="profil">Profil</span></li>
+         <li><span id="mail">Nachrichten</span></li>
+         <li><span id="allianz">Allianz</span></li>
+         <li><span id="ranking">Bestenliste</span></li>
+         <li><span id="shop">Shop</span></li>
+		 <li><a href="logout.php">Abmelden</span></li>
 </nav>
 <!-- navi ende -->
 
