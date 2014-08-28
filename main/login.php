@@ -25,6 +25,7 @@ if(isset($_SESSION['logged_in'])){
 		header('Location:index.php');
 	} else {
 		$_SESSION['error']='Benutzername/Password falsch eingegeben';
+		header('Location:login.php');
 	}
 	
 	} 

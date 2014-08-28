@@ -6,7 +6,9 @@ class User{
 			$dbh = Database::getInstance();
 			$sth = $dbh->prepare('Select password from benutzer where Name=:input or email=:input');
 			$sth->bindParam(':input',$user);
-			$sth->execute();
+			if(!$sth->execute()){
+				return false;
+			}
 			$row = $sth->fetch();
 			if(password_verify($password,$row['password'])){
 				return true;
@@ -20,10 +22,9 @@ class User{
 				$dbh = Database::getInstance();
 				$sth = $dbh->prepare('INSERT INTO benutzer(Name, password, email) VALUES (:name,:pw,:email)');
 				$sth->bindParam(':name', $user);
-				$sth->bindParam(':pw', password_hash($password, password_BCRYPT));
+				$sth->bindParam(':pw', password_hash($password, PASSWORD_BCRYPT));
 				$sth->bindParam(':email', $email);
-				$sth->execute();
-				return true;
+				return $sth->execute();
 			} catch (PDOException $e) {
 				return false;
 			}
@@ -79,7 +80,7 @@ class User{
 				$dbh = Database::getInstance();
 				$sth = $dbh->prepare('UPDATE benutzer SET password = :pw WHERE name = :name');
 				$sth->bindParam(':name', $user);
-				$sth->bindParam(':pw', password_hash($password, password_BCRYPT));
+				$sth->bindParam(':pw', password_hash($password, PASSWORD_BCRYPT));
 				$sth->execute();
 				return true;
 			} catch (PDOException $e) {
