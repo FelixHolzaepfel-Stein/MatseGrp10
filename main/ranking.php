@@ -3,10 +3,22 @@
 require('../lib/Ranking.class.php');
 
 
-$lowerBound= ($_GET['recordsLoaded'])*10;
-$upperBound= $_GET['upperBound']*10;
+
+if(isset($_GET['recordsLoaded']) && isset($_GET['upperBound'])){
+
+$lowerBound= ((int)$_GET['recordsLoaded'])*10;
+
+$upperBound= ((int)$_GET['upperBound'])*10;
+
+#echo($upperBound);
 
 echo Ranking::fetchRanking($lowerBound, $upperBound);
+
+}
+else
+{
+	return;
+}
 
 
 
@@ -14,4 +26,5 @@ echo Ranking::fetchRanking($lowerBound, $upperBound);
 
 
 ?>
+
 
