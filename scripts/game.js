@@ -4,7 +4,8 @@ $(function() {
 						.done(function (data) { 
 							$('#divGame')
 								.empty()
-								.append(data);
+								.append(data)
+								.show();
 							$('#divMain').hide();
 							$('#divAllianz').hide();
 							$('#divMail').hide();
