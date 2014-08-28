@@ -175,7 +175,7 @@ footer{
   -webkit-transition:background .3s;
 }
 
-.profilButton:hover{
+#changeDesc:hover{
   background:#2288bb;
 }
 
