@@ -18,7 +18,7 @@
 
 <div id="login">
   <h1>Bei TicTacToe Online registrieren</h1>
-  <form action="register_post.php" method="post" id="subm">
+  <form action="register.php" method="post" id="subm">
     <input name="Name" type="text" id="name" placeholder="Benutzername" />
     <input name="Email" type="email" id="email" placeholder="E-mail" />
     <input name="Password1" type="password" id="pw1" placeholder="Passwort" />
