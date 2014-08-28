@@ -28,9 +28,9 @@
     <a href="#register" id="pwvergessen">Passwort vergessen?</a>
   </form>
 </div>
-
-
+<div class="error">{$error}</div>
 </div>
+
 <!-- ende wrapper -->
 
 

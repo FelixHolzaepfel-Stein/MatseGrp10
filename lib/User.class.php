@@ -103,10 +103,12 @@ class User{
 		
 		public static function userExists($name){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select count(*) FROM user WHERE Name = :name');
+			$sth = $dbh->prepare('Select count(*) FROM benutzer WHERE Name = :name');
 			$sth->bindParam(':name',$name);
 			$sth->execute();
-			if($sth->rowCount() > 0 ){
+			$row=$sth->fetch();
+			print_r($row);
+			if((int)$row['count(*)'] > 0 ){
 				return true;
 			}else{
 				return false;
@@ -115,10 +117,12 @@ class User{
 		
 		public static function emailExists($email){
 			$dbh = Database::getInstance();
-			$sth = $dbh->prepare('Select count(*) FROM user WHERE email = :email');
+			$sth = $dbh->prepare('Select count(*) FROM benutzer WHERE email = :email');
 			$sth->bindParam(':email',$email);
 			$sth->execute();
-			if($sth->rowCount() > 0 ){
+			$row=$sth->fetch();
+			print_r($row);
+			if((int)$row['count(*)'] > 0 ){
 				return true;
 			}else{
 				return false;
