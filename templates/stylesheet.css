@@ -146,8 +146,8 @@ footer{
   -webkit-transition:background .3s;
 }
 
-#changeDesc{
-  float: right;
+.profilButton{
+  float: left;
   width:200px;
   background:#FC8D00;
   display:block;

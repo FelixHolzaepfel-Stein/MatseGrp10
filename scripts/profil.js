@@ -5,7 +5,7 @@ $(function() {
 							$('#divProfil')
 								.empty()
 								.append(data)
-								.show();
+								.slideDown();
 							$('#divMain').hide();
 							$('#divAllianz').hide();
 							$('#divGame').hide();
