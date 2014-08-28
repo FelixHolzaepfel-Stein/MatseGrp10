@@ -1,27 +1,38 @@
-<html> 
-	<head>
-		<link rel="stylesheet" type="text/css" href="../templates/stylesheet.css">
-	</head>
-	<body>
-		<form action='login.php' method='post'>
-			<table>
-				<tr>
-					<td class='loginLabel'>Benutzername/<br>E-Mail-Adresse:</td>
-					<td><input name='Input' type='text' class='loginInput'></td>
-				</tr>
-				<tr>
-					<td class='loginLabel'>Password:</td>
-					<td><input name='Password' type='password' class='loginInput'></td>
-				</tr>
-			</table>
-			<div id='controls'>
-				<input type='submit' value='Einloggen' name='login' class='loginButton' >
-				<a href='register.php' id='registrieren'>Registrieren</a>
-				<a href='#register' id='pwvergessen'>Passwort vergessen</a>
-			</div>
-			<div id="errors">
-				<input type="hidden" name="tmp" value=1 >
-			</div>
-		</form>
-	</body>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>:: TicTacToe Online - Login::</title>
+<link rel="stylesheet" type="text/css" href="../templates/stylesheet.css">
+</head>
+
+
+
+ <body>
+
+<!-- beginn wrapper -->
+<div id="wrp">
+
+<div class="headline">TicTacToe Online</div>
+
+
+<div id="login">
+  <h1>Einloggen</h1>
+  <form action="login.php" method="post">
+    <input name="Input" type="text" placeholder="Benutzername" />
+    <input name="Password" type="password" placeholder="Passwort" />
+    <input name="login" type="submit" value="Log in" />
+    <a href="register.php" id="registrieren">Registrieren</a> |
+    <a href="#register" id="pwvergessen">Passwort vergessen?</a>
+  </form>
+</div>
+
+
+</div>
+<!-- ende wrapper -->
+
+
+ </body>
+
 </html>

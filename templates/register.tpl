@@ -1,19 +1,41 @@
-<html> 
-<head>
+<!DOCTYPE html>
+<html>
 
+<head>
+<title>:: TicTacToe Online - Login::</title>
+<link rel="stylesheet" type="text/css" href="../templates/stylesheet.css">
 </head>
-<body>
-	<form action="register_post.php" method="post" id="subm">
-		Name:<input name="Name" type="text" id="name"><br>
-		Email:<input name="Email" type="text" id="email"><br>
-		Password:<input name="Password1" type="password" id="pw1"><br>
-		Password wiederholen :<input name="Password2" type="password" id="pw2"><br>
-		<input type="hidden" name="tmp" value=1 >
-		<input type="submit" value="Registrieren" name="Register" id="btn" >
-	</form>
-	<div id="output"></div>
-	
-	<script src="scripts/jquery.js"></script>
-	<script src="scripts/script.js"></script>
-</body>
+
+
+
+ <body>
+
+<!-- beginn wrapper -->
+<div id="wrp">
+
+<div class="headline">TicTacToe Online</div>
+
+
+<div id="login">
+  <h1>Bei TicTacToe Online registrieren</h1>
+  <form action="register_post.php" method="post" id="subm">
+    <input name="Name" type="text" id="name" placeholder="Benutzername" />
+    <input name="Email" type="email" id="email" placeholder="E-mail" />
+    <input name="Password1" type="password" id="pw1" placeholder="Passwort" />
+    <input name="Password2" type="password" id="pw2" placeholder="Passwort wiederholen" />
+    <input type="hidden" name="tmp" value=1 >
+    <input type="submit" value="Registrieren" name="Register" id="btn" />
+  </form>
+</div>
+
+<div id="output"></div>
+
+</div>
+<!-- ende wrapper -->
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/script.js"></script>
+
+ </body>
+
 </html>
