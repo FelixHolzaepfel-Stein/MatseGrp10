@@ -60,8 +60,9 @@
 		
 	<div id="divRanking">
 		<div id="divInnerRanking">
-				<a href=""><</a>
-				<a href="">></a>
+				<a id="backButton" href=""><</a>
+				<p>1<p>
+				<a id="nextButton" href="">></a>
 		</div>
 	</div>
 	
