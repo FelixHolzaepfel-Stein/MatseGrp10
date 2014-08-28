@@ -5,6 +5,8 @@
 <head>
 <title>:: TicTacToe Online - Login::</title>
 <link rel="stylesheet" type="text/css" href="../templates/stylesheet.css">
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/login.js"></script>
 </head>
 
 
@@ -19,10 +21,10 @@
 
 <div id="login">
   <h1>Einloggen</h1>
-  <form action="login.php" method="post">
-    <input name="Input" type="text" placeholder="Benutzername" />
-	<input name="tmp" type="hidden" value=1 />
-    <input name="Password" type="password" placeholder="Passwort" />
+  <form action="login.php" method="post" id="submfrm">
+    <input name="Input" type="text" placeholder="Benutzername/Email" id="txtlogininput"/>
+	<input name="tmp" type="hidden" value=1/>
+    <input name="Password" type="password" placeholder="Passwort" id="txtpassword"/>
     <input name="login" type="submit" value="Log in" />
     <a href="register.php" id="registrieren">Registrieren</a> |
     <a href="#register" id="pwvergessen">Passwort vergessen?</a>
