@@ -23,7 +23,7 @@
     <input name="Email" type="email" id="email" placeholder="E-mail" />
     <input name="Password1" type="password" id="pw1" placeholder="Passwort" />
     <input name="Password2" type="password" id="pw2" placeholder="Passwort wiederholen" />
-    <input type="hidden" name="tmp" value=1 >
+    <input type="hidden" name="tmp" value=1 />
     <input type="submit" value="Registrieren" name="Register" id="btn" />
   </form>
 </div>

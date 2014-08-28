@@ -21,7 +21,7 @@
   <h1>Einloggen</h1>
   <form action="login.php" method="post">
     <input name="Input" type="text" placeholder="Benutzername" />
-	<input name="tmp" type="hidden" value=1/>
+	<input name="tmp" type="hidden" value=1 />
     <input name="Password" type="password" placeholder="Passwort" />
     <input name="login" type="submit" value="Log in" />
     <a href="register.php" id="registrieren">Registrieren</a> |
