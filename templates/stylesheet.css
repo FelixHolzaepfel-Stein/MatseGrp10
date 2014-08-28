@@ -99,6 +99,20 @@ footer{
 
 
 
+.feldButton{
+  float:center;
+  width:100px;
+  height:100px;
+  padding-right:1px;
+  display:block;
+  margin:0 auto;
+  margin-top:1%;
+  text-align:center;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
 .button{
   width:100px;
   background:#FC8D00;
@@ -118,8 +132,22 @@ footer{
   background:#2288bb;
 }
 
-.profilButton{
-  float: left;
+#spielfeld{
+  width: 90%;
+  display:block;
+  margin:0 auto;
+  margin-top:1%;
+  padding:10px;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+#changeDesc{
+  float: right;
   width:200px;
   background:#FC8D00;
   display:block;
@@ -209,4 +237,13 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
   background:#D67F16;
+}
+
+/* ######## Spiel ######## */
+.kreuz{
+	background-image: url(../images/kreuz.png);
+}
+
+.kreis{
+	background-image: url(../images/kreis.png);
 }
