@@ -118,8 +118,8 @@ footer{
   background:#2288bb;
 }
 
-#changeDesc{
-  float: right;
+.profilButton{
+  float: left;
   width:200px;
   background:#FC8D00;
   display:block;
@@ -134,7 +134,7 @@ footer{
   -webkit-transition:background .3s;
 }
 
-#changeDesc:hover{
+.profilButton:hover{
   background:#2288bb;
 }
 
