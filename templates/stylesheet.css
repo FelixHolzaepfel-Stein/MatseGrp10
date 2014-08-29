@@ -97,22 +97,6 @@ footer{
 
 /* ######## Formular ######## */
 
-
-
-.feldButton{
-  float:center;
-  width:100px;
-  height:100px;
-  padding-right:1px;
-  display:block;
-  margin:0 auto;
-  margin-top:1%;
-  text-align:center;
-  cursor:pointer;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-
 .button{
   width:100px;
   background:#FC8D00;
@@ -132,39 +116,6 @@ footer{
   background:#2288bb;
 }
 
-#spielfeld{
-  float: center;
-  width: 30%;
-  display:block;
-  margin:0 auto;
-  margin-left: auto ;
-  margin-right: auto ;
-  margin-top:1%;
-  padding:10px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-
-.profilButton{
-  float: left;
-  width:200px;
-  background:#FC8D00;
-  display:block;
-  margin:0 auto;
-  margin-top:1%;
-  padding:10px;
-  text-align:center;
-  text-decoration:none;
-  color:#fff;
-  cursor:pointer;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-
 .error{
   width:80%;
   background:#FC8D00;
@@ -178,9 +129,6 @@ footer{
   -webkit-transition:background .3s;
 }
 
-.profilButton:hover{
-  background:#2288bb;
-}
 
 #login{
   width:400px;
@@ -243,6 +191,38 @@ input[type="submit"]:hover{
 }
 
 /* ######## Spiel ######## */
+
+#spielfeld{
+  float: center;
+  width: 30%;
+  display:block;
+  margin:0 auto;
+  margin-left: auto ;
+  margin-right: auto ;
+  margin-top:1%;
+  padding:10px;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+.feldButton{
+  float:center;
+  width:100px;
+  height:100px;
+  padding-right:1px;
+  display:block;
+  margin:0 auto;
+  margin-top:1%;
+  text-align:center;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
 .kreuz{
 	background-image: url(../images/kreuz.png);
 }
@@ -270,6 +250,13 @@ input[type="submit"]:hover{
   border-collapse: collapse;
 
   border: 1px solid black;
+}
+
+#divInnerRanking{
+  margin-left:auto; 
+  margin-right:auto;
+  width: 50%;
+  text-align: center;
 }
 
 /* ######## Shop ######## */
@@ -301,4 +288,26 @@ input[type="submit"]:hover{
   cursor:pointer;
   transition:background .3s;
   -webkit-transition:background .3s;
+}
+
+/* ######## Profil ######## */
+
+.profilButton{
+  float: left;
+  width:200px;
+  background:#FC8D00;
+  display:block;
+  margin:0 auto;
+  margin-top:1%;
+  padding:10px;
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+.profilButton:hover{
+  background:#2288bb;
 }
