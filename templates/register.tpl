@@ -27,6 +27,7 @@
     <input name="Password2" type="password" id="pw2" placeholder="Passwort wiederholen" />
     <input type="hidden" name="tmp" value=1 >
     <input type="submit" value="Registrieren" name="Register" id="btn" />
+	<a id="zurueck" href="login.php">Zurück zum Login</a>
   </form>
 </div>
 

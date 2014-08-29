@@ -27,7 +27,7 @@
     <input name="Password" type="password" placeholder="Passwort" id="txtpassword"/>
     <input name="login" type="submit" value="Log in" />
     <a href="register.php" id="registrieren">Registrieren</a> |
-    <a href="#register" id="pwvergessen">Passwort vergessen?</a>
+    <a href="#pwvergessen" id="pwvergessen">Passwort vergessen?</a>
   </form>
 </div>
 <div class="error">{$error}</div>
