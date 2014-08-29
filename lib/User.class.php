@@ -107,7 +107,6 @@ class User{
 			$sth->bindParam(':name',$name);
 			$sth->execute();
 			$row=$sth->fetch();
-			print_r($row);
 			if((int)$row['count(*)'] > 0 ){
 				return true;
 			}else{
@@ -121,7 +120,6 @@ class User{
 			$sth->bindParam(':email',$email);
 			$sth->execute();
 			$row=$sth->fetch();
-			print_r($row);
 			if((int)$row['count(*)'] > 0 ){
 				return true;
 			}else{
