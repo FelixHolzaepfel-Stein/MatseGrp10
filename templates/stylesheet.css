@@ -248,7 +248,7 @@ input[type="submit"]:hover{
 	background-image: url(../images/kreis.png);
 }
 
-{
+.rankingTable{
   margin-left:auto; 
   margin-right:auto;
   width: 50%;
