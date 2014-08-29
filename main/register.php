@@ -13,7 +13,7 @@ if(isset($_SESSION['logged_in'])){
 	
 	
 	if(isset($_POST['tmp'])){
-		if($_POST['Name']!=='' || $_POST['Email'] !==''){
+		if($_POST['Name']!=='' && $_POST['Email'] !==''){
 		if(!User::userExists($_POST['Name']) || !User::emailExists($_POST['Email'])){
 			if(!User::userExists($_POST['Name'])){
 				if(!User::emailExists($_POST['Email'])){
@@ -37,7 +37,7 @@ if(isset($_SESSION['logged_in'])){
 		}
 		}
 		else {
-			$_SESSION['error']= 'Name und Email sind leer.';
+			$_SESSION['error']= 'Name und/oder Email sind leer.';
 		}
 		
 	}
