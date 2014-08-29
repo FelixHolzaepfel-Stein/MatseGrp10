@@ -49,8 +49,9 @@ function erstelleSpielfeld(){
 function besetzeFeld(id){
 	$('#' + id).addClass('kreuz');
 	$('#' + id).prop("disabled", true);
-	istSiegzustand();
-	zugDerKI();
+	if(istSiegzustand()) {
+		zugDerKI();
+	}
 }
 
 function zugDerKI(){
@@ -162,6 +163,8 @@ function istSiegzustand(){
 			return verteilePunkte(2);
 		}
 	}
+	
+	return true;
 }
 
 function verteilePunkte(sieger){
@@ -169,6 +172,7 @@ function verteilePunkte(sieger){
 	if(sieger == 0){
 		alert('Unentschieden!');
 		disableAlleFelder('Unentschieden');
+		vergebePunkte( 0 );
 		//throw { name: 'FatalError', message: 'Something went badly wrong' };
 		return false;
 	}
@@ -176,6 +180,7 @@ function verteilePunkte(sieger){
 	if(sieger == 1){
 		alert('Du gewinnst!');
 		disableAlleFelder('Gewonnen!');
+		vergebePunkte( 1);
 		//throw { name: 'FatalError', message: 'Something went badly wrong' };
 		return false;
 	}
@@ -183,9 +188,12 @@ function verteilePunkte(sieger){
 	if(sieger == 2){
 		alert('Verloren...');
 		disableAlleFelder();
+		vergebePunkte( -1);
 		//throw { name: 'FatalError', message: 'Something went badly wrong' };
 		return false;
 	}
+	
+	return true;
 }
 
 function zuegeMoeglich(){
@@ -206,4 +214,10 @@ function zuegeMoeglich(){
 	}
 	
 	return arr;
+}
+
+function vergebePunkte( punkte) {
+	$.post('vergebePunkte.php', {Points: punkte},function(data){
+	
+	});
 }
