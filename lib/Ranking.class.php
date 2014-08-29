@@ -21,14 +21,14 @@ class Ranking
 		$statement->execute();
 
 
-
-		$returnHtml = "<table>";
-		$returnHtml .= "<thead>";
-		$returnHtml .= "<tr>";
-		$returnHtml .= "<th>Name</th><th>Punktzahl</th>";
-		$returnHtml .= "</tr>";
-		$returnHtml .= "</thead>";
-		$returnHtml .= "<tbody id='rankingTable'>";
+		$returnHtml="";
+		#$returnHtml = "<table>";
+		#$returnHtml .= "<thead>";
+		#$returnHtml .= "<tr>";
+		#$returnHtml .= "<th>Name</th><th>Punktzahl</th>";
+		#$returnHtml .= "</tr>";
+		#$returnHtml .= "</thead>";
+		#$returnHtml .= "<tbody id='rankingTable'>";
 
 		$recordAmountPerPage = 10;
 		$count = $lowerBound+1;
@@ -37,13 +37,13 @@ class Ranking
 		{	
 
 			
-			$pageNumber = $count % $recordAmountPerPage;
-			$returnHtml .= "<tr id='".$row['ID']."'><td class='".$pageNumber." '>".$row['Name']."</td><td>".$row['Points']."</td><td class='description'>".$row['Description']."</td></tr>";
+			$pageNumber = (int)$upperBound/10;
+			$returnHtml .= "<tr id='".$row['ID']."' class='".$pageNumber."''><td>".$row['Name']."</td><td>".$row['Points']."</td><td class='description'>".$row['Description']."</td></tr>";
 			$count++;
 		}
 
-		$returnHtml .= "</tbody>";
-		$returnHtml .= "</table>";
+		#$returnHtml .= "</tbody>";
+		#$returnHtml .= "</table>";
 		return $returnHtml;
 
 			}
