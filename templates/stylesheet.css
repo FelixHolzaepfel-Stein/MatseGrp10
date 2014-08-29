@@ -247,3 +247,22 @@ input[type="submit"]:hover{
 .kreis{
 	background-image: url(../images/kreis.png);
 }
+
+{
+  margin-left:auto; 
+  margin-right:auto;
+  width: 50%;
+  text-align: left;
+  border-collapse: collapse;
+
+  border: 1px solid black;
+}
+
+.rankingTable th, .rankingTable tr, .rankingTable td 
+{
+  
+  text-align: left;
+  border-collapse: collapse;
+
+  border: 1px solid black;
+}
