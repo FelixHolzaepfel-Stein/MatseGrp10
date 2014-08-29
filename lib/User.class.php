@@ -101,6 +101,19 @@ class User{
 			}
 		}
 		
+		public static function changePoints($id, $points) {
+			try {
+				$dbh = Database::getInstance();
+				$sth = $dbh->prepare('UPDATE benutzer SET Points = :points WHERE ID = :id');
+				$sth->bindParam(':points', $points);
+				$sth->bindParam(':id', $id);
+				$sth->execute();
+				return true;
+			} catch (PDOException $e) {
+				return false;
+			}
+		}
+		
 		public static function userExists($name){
 			$dbh = Database::getInstance();
 			$sth = $dbh->prepare('Select count(*) FROM benutzer WHERE Name = :name');
