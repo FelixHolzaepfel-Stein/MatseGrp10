@@ -13,6 +13,7 @@
     <script src="../scripts/allianz.js"></script>
     <script src="../scripts/ranking.js"></script>
     <script src="../scripts/shop.js"></script>
+    <script src="../scripts/anchor.js"></script>
 	
 </head>
 
