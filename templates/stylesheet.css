@@ -259,6 +259,10 @@ input[type="submit"]:hover{
   text-align: center;
 }
 
+#divInnerRanking span{
+	cursor:pointer;
+}
+
 /* ######## Shop ######## */
 
 #shopHeadline{
