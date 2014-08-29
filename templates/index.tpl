@@ -60,7 +60,7 @@
 	<div id="divAllianz"></div>
 		
 	<div id="divRanking">
-		<table>
+		<table class="rankingTable">
 		<thead>
 		<tr>
 		<thead>Name</thead>
