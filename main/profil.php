@@ -24,7 +24,7 @@ if (isset($_SESSION['id'])) {
 		$returnHtml .= '<tr><td>Benutzername: </td><td>' . $name . '</td></tr>';
 		$returnHtml .= '<tr><td>E-Mail: </td><td>' . $mail . '</td></tr>';
 		$returnHtml .= '<tr><td>Punkte: </td><td>' . $points . '</td></tr>';
-		$returnHtml .= '<tr><td>Beschreibung: </td><td><input type="text" id="changeDescField" name="changeDescField" value="' . $description . '"></td></tr>';
+		$returnHtml .= '<tr><td>Beschreibung: </td><td><textarea id="changeDescField" name="changeDescField" cols="30" rows="3" wrap="hard">'.$description.'</textarea></td></tr>';
 		$returnHtml .= '</table>';
 		$returnHtml .= '<input type="button" class="profilButton" id="changeDescBtn" value="Speichern">';
 	}

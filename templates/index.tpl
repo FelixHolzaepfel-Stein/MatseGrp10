@@ -10,7 +10,6 @@
     <script src="../scripts/game.js"></script>
     <script src="../scripts/profil.js"></script>
     <script src="../scripts/mail.js"></script>
-    <script src="../scripts/allianz.js"></script>
     <script src="../scripts/ranking.js"></script>
     <script src="../scripts/shop.js"></script>
     <script src="../scripts/anchor.js"></script>
@@ -35,7 +34,6 @@
          <li><a href="#game" id="game">Neues Spiel</a></li>
          <li><a href="#profil" id="profil">Profil</a></li>
          <li><a href="#mail" id="mail">Nachrichten</a></li>
-         <li><a href="#allianz" id="allianz">Allianz</a></li>
          <li><a href="#ranking" id="ranking">Bestenliste</a></li>
          <li><a href="#shop" id="shop">Shop</a></li>
 		 <li><a href="logout.php">Abmelden</a></li>
@@ -58,7 +56,6 @@
 		
 	<div id="divMail"></div>
 		
-	<div id="divAllianz"></div>
 		
 	<div id="divRanking">
 		<table class="rankingTable">
