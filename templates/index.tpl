@@ -74,7 +74,7 @@
 
 		<div id="divInnerRanking">
 				<span id="backButton" ><</span>
-				<p id="pageNumber">1<p>
+				<span id="pageNumber">1<span>
 				<span id="nextButton" >><span>
 		</div>
 	</div>
