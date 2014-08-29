@@ -9,11 +9,12 @@ $(function() {
 	$('#divShop').hide();
 	
 	$('#main').click(function () {
-					$.ajax('main.php')
+					$.ajax('main.php')	
 						.done(function (data) { 
 							$('#divMain')
 								.empty()
-								.append(data);
+								.append(data)
+								.show();
 							$('#divAllianz').hide();
 							$('#divGame').hide();
 							$('#divMail').hide();
