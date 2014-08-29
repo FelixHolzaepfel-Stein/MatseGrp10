@@ -73,7 +73,18 @@ class User{
 			$sth->execute();
 			$row = $sth->fetch();
 			return $row['Points'];
+		
 		}
+		
+		public static function getMailByID($id) {
+			$dbh = Database::getInstance();
+			$sth = $dbh->prepare('SELECT * FROM messages WHERE ID = :id');
+			$sth->bindParam(':id', $id);
+			$sth->execute();
+			$row = $sth->fetch();
+			return $row;
+		}
+		
 		
 		public static function getMailsByID($id) {
 			$dbh = Database::getInstance();
