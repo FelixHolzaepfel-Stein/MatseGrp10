@@ -64,6 +64,7 @@
 		<tr>
 		<th>Name</th>
 		<th>Punkte</th>
+		<th>Beschreibung</th>
 		</tr>
 		<tbody id="rankingTable">
 		</tbody>
