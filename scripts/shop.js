@@ -14,7 +14,7 @@ $(function() {
 							$('#divRanking').hide();
 							
 							$('#buyBtn').click(function () {
-											if (!$('#10p').val() && !$('#20p').val() && !$('#50p').val()) {
+											if (!$('#10p:checked').val() && !$('#20p:checked').val() && !$('#50p:checked').val()) {
 												alert('Sie muessen einen Kauf auswaehlen!');
 											} else {
 												var buyPoints;
