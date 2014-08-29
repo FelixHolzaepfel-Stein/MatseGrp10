@@ -51,6 +51,8 @@ function besetzeFeld(id){
 	$('#' + id).prop("disabled", true);
 	if(istSiegzustand()) {
 		zugDerKI();
+	} else {
+		$('#game').trigger('click');
 	}
 }
 
@@ -67,7 +69,9 @@ function zugDerKI(){
 	$('#' + zielfeld).addClass('kreis');
 	$('#' + zielfeld).prop("disabled", true);
 	
-	istSiegzustand();
+	if(!istSiegzustand()){
+		$('#game').trigger('click');
+	}
 }
 
 function disableAlleFelder(){
