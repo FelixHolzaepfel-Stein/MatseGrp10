@@ -210,12 +210,12 @@ input[type="submit"]:hover{
 }
 
 .feldButton{
-  float:center;
   width:100px;
   height:100px;
   padding-right:1px;
   display:block;
-  margin:0 auto;
+  margin-left: auto ;
+  margin-right: auto ;
   margin-top:1%;
   text-align:center;
   cursor:pointer;
@@ -261,6 +261,10 @@ input[type="submit"]:hover{
 
 /* ######## Shop ######## */
 
+#shopHeadline{
+	font-size:350%;
+}
+
 #buyForm{
   width: 30%;
   display:block;
@@ -269,9 +273,12 @@ input[type="submit"]:hover{
   margin-top:1%;
   text-align:center;
   color:#000;
-  cursor:pointer;
   transition:background .3s;
   -webkit-transition:background .3s;
+}
+
+.shopRadio{
+	cursor:pointer;
 }
 
 .shopButton{

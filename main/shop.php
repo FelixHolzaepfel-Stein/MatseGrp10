@@ -18,10 +18,10 @@ if(isset($_POST['buy'])) {
 } else {
 	//Ansicht erstellen
 	$returnHtml = '<form id="buyForm">';
-	$returnHtml .= '<p><h1>Shop</h1></p><br>';
-	$returnHtml .= '<p><input type="radio" id="10p" name="buyP">10 Punkte - 3&euro;</p><br>';
-	$returnHtml .= '<p><input type="radio" id="20p" name="buyP">20 Punkte - 5&euro;</p><br>';
-	$returnHtml .= '<p><input type="radio" id="50p" name="buyP">50 Punkte - 10&euro;</p><br>';
+	$returnHtml .= '<p><h1 id="shopHeadline">Shop</h1></p><br>';
+	$returnHtml .= '<p><input type="radio" id="10p" name="buyP" class="shopRadio">10 Punkte - 3&euro;</p><br>';
+	$returnHtml .= '<p><input type="radio" id="20p" name="buyP" class="shopRadio">20 Punkte - 5&euro;</p><br>';
+	$returnHtml .= '<p><input type="radio" id="50p" name="buyP" class="shopRadio">50 Punkte - 10&euro;</p><br>';
 	$returnHtml .= '<p>Bitte waehlen Sie Ihre Zahlungsweise</p><p><select name="zahlung">';
 	$returnHtml .= '<option>Pay Pal</option>';
 	$returnHtml .= '<option>Kreditkarte</option>';
