@@ -61,12 +61,10 @@
 		
 	<div id="divRanking">
 		<table class="rankingTable">
-		<thead>
 		<tr>
-		<thead>Name</thead>
-		<thead>Punkte</thead>
+		<th>Name</th>
+		<th>Punkte</th>
 		</tr>
-		</thead>
 		<tbody id="rankingTable">
 		</tbody>
 		</table>
