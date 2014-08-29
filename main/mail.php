@@ -35,16 +35,16 @@ if (isset($_POST['newMail'])) {
 	//Seite laden
 	$id = $_SESSION['id'];
 	$mails = User::getMailsByID($id);
-	$returnHtml = '<h3>Nachrichten</h3><br>';
-	$returnHtml .= '<ul><br>';
+	$returnHtml = '<input id="newMailBtn" class="profilButton" type="button" value="Neue Nachricht schreiben"><br>';
+	$returnHtml .= '<table class="rankingTable">';
+	$returnHtml .= '<tr><td>Von</td><td>An</td><td>Betreff</td></tr><br>';
 	
 	$countMails = count($mails); 
 	
 	for ($i = 0; $i < $countMails; $i++) {
-		$returnHtml .= '<li id="mail' . $i . '">'. User::getNameByID($mails[$i]['From_ID']) . ' - ' . User::getNameByID($mails[$i]['To_ID']) . ': '. $mails[$i]['Title'] . '</li><br>';
+		$returnHtml .= '<tr><td id="mail' . $i . '">'. User::getNameByID($mails[$i]['From_ID']) . '</td><td> ' . User::getNameByID($mails[$i]['To_ID']) . '</td><td>'. $mails[$i]['Title'] . '</td></tr><br>';
 	}
-	$returnHtml .= '</ul>';
-	$returnHtml .= '<input id="newMailBtn" class="profilButton" type="button" value="Neue Nachricht schreiben"><br>';
+	$returnHtml .= '</table>';
 	
 	echo $returnHtml;
 }
