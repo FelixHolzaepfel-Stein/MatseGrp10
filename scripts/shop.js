@@ -18,11 +18,11 @@ $(function() {
 												alert('Sie muessen einen Kauf auswaehlen!');
 											} else {
 												var buyPoints;
-												if ($('#10p').val()) {
+												if ($('#10p:checked').val()) {
 													buyPoints = 10;
-												}else if ($('#20p').val()) {
+												}else if ($('#20p:checked').val()) {
 													buyPoints = 20;
-												} else if ($('#50p').val()) {
+												} else if ($('#50p:checked').val()) {
 													buyPoints = 50;
 												}
 												$.post('shop.php', {buy:buyPoints}, function(data) {
