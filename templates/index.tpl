@@ -88,7 +88,7 @@
 
 <!-- footer beginn -->
 <footer>
-Name 1 | Name 2 | Name 3
+Mona Scholl | Niklas Roth | Felix Holzaepfel-Stein | Andreas Trautwein | Enes Hoyladi
 </footer>
 <!-- footer ende -->
 
