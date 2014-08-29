@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 27. Aug 2014 um 14:50
+-- Erstellungszeit: 29. Aug 2014 um 11:12
 -- Server Version: 5.6.16
 -- PHP-Version: 5.5.11
 
@@ -64,6 +64,30 @@ CREATE TABLE IF NOT EXISTS `benutzer` (
   `Points` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`),
   UNIQUE KEY `Name` (`Name`,`Email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Daten für Tabelle `benutzer`
+--
+
+INSERT INTO `benutzer` (`ID`, `Name`, `Email`, `Password`, `Description`, `Points`) VALUES
+(1, '', '', '$2y$10$6BOCookVTbnedqUWIetUleByBZNsjutOBIQdwLymMhmu6iSfZ6Nbe', NULL, 0),
+(2, 'Felix', 'Felix@Felix.de', '$2y$10$9YuwhhdUb8VsULfx51izP.CEnCv7XIFL4DEhhTIgUZZRc8FPQ7lfe', '1234', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `game`
+--
+
+CREATE TABLE IF NOT EXISTS `game` (
+  `ID` int(9) NOT NULL AUTO_INCREMENT,
+  `user_one_id` int(9) NOT NULL,
+  `user_two_id` int(9) DEFAULT NULL,
+  `gamefield` varchar(9) NOT NULL DEFAULT '000000000',
+  `finished` int(1) NOT NULL DEFAULT '0',
+  `currentUser` int(9) NOT NULL,
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -134,8 +158,8 @@ ALTER TABLE `alliance_user`
 -- Constraints der Tabelle `messages`
 --
 ALTER TABLE `messages`
-  ADD CONSTRAINT `mes_to_id_fk` FOREIGN KEY (`To_ID`) REFERENCES `benutzer` (`ID`),
-  ADD CONSTRAINT `mes_from_id_fk` FOREIGN KEY (`From_ID`) REFERENCES `benutzer` (`ID`);
+  ADD CONSTRAINT `mes_from_id_fk` FOREIGN KEY (`From_ID`) REFERENCES `benutzer` (`ID`),
+  ADD CONSTRAINT `mes_to_id_fk` FOREIGN KEY (`To_ID`) REFERENCES `benutzer` (`ID`);
 
 --
 -- Constraints der Tabelle `payment_orders`
