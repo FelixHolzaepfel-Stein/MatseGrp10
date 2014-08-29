@@ -6,8 +6,7 @@ session_start();
 
 if (isset($_POST['newMail'])) {
 	//Nachricht senden
-	$returnHtml = '<h1>Neue Nachricht</h1>';
-	$returnHtml .= '<p><input id="newMailSendBtn" class="profilButton" type="button" value="Senden"></p>';
+	$returnHtml = '<p><input id="newMailSendBtn" class="profilButton" type="button" value="Senden"></p>';
 	$returnHtml .= '<table border=0><br>';
 	$returnHtml .= '<tr><td>An: </td><td><input type="text" id="an"></td><br>';
 	$returnHtml .= '<tr><td>Betreff: </td><td><input type="text" id="betreff"></td><br>';
@@ -30,7 +29,19 @@ if (isset($_POST['newMail'])) {
 	}
 	
 } else if(isset($_POST['open'])) { 
-	//Nachricht öffnen
+	$id = $_POST['mailid'];
+	$mail = User::getMailByID($id+1);
+	$returnHtml = '<p><input id="BackBtn" class="profilButton" type="button" value="back"></p>';
+	$returnHtml .= '<table border=0><br>';
+	$returnHtml .= '<tr><td>Von: </td><td>'.User::getNameByID($mail['From_ID']).'</td><br>';
+	$returnHtml .= '<tr><td>An: </td><td>'.User::getNameByID($mail['To_ID']).'</td><br>';
+	$returnHtml .= '<tr><td>Betreff: </td><td>'.$mail['Title'].'</td><br>';
+	$returnHtml .= '<tr><td>Inhalt: </td><td>'.$mail['Text'].'</td><br>';
+	$returnHtml .= '</table>';
+	
+	echo $returnHtml;
+	
+	
 } else {
 	//Seite laden
 	$id = $_SESSION['id'];
@@ -40,13 +51,13 @@ if (isset($_POST['newMail'])) {
 	$returnHtml .= '<tr><td>Von</td><td>An</td><td>Betreff</td></tr><br>';
 	
 	$countMails = count($mails); 
-	
-	for ($i = 0; $i < $countMails; $i++) {
-		$returnHtml .= '<tr><td id="mail' . $i . '">'. User::getNameByID($mails[$i]['From_ID']) . '</td><td> ' . User::getNameByID($mails[$i]['To_ID']) . '</td><td>'. $mails[$i]['Title'] . '</td></tr><br>';
+	$i = 0;
+	for ($i ; $i < $countMails; $i++) {
+		$returnHtml .= '<tr id="mail' . $i . '"><td >'. User::getNameByID($mails[$i]['From_ID']) . '</td><td> ' . User::getNameByID($mails[$i]['To_ID']) . '</td><td>'. $mails[$i]['Title'] . '</td></tr><br>';
 	}
 	$returnHtml .= '</table>';
 	
-	echo $returnHtml;
+	echo $i.$returnHtml ;
 }
 
 
