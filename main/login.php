@@ -5,7 +5,6 @@ require ('../lib/User.class.php');
 
 require ('../lib/Template.class.php');
 
-print_r($_POST);
 session_start();
 if(isset($_SESSION['logged_in'])){
 	header('Location:index.php');

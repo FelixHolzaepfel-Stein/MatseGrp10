@@ -13,10 +13,11 @@ if(isset($_SESSION['logged_in'])){
 	
 	
 	if(isset($_POST['tmp'])){
+		if($_POST['Name']!=='' || $_POST['Email'] !==''){
 		if(!User::userExists($_POST['Name']) || !User::emailExists($_POST['Email'])){
 			if(!User::userExists($_POST['Name'])){
 				if(!User::emailExists($_POST['Email'])){
-					if($_POST['Password1']===$_POST['Password2']){
+					if($_POST['Password1']===$_POST['Password2'] || $_POST['Password1']==='' || $_POST['Password2']){
 						if(User::registerUser($_POST['Name'],$_POST['Email'],$_POST['Password1'])){
 							header('Location:login.php');
 						} else {
@@ -34,6 +35,11 @@ if(isset($_SESSION['logged_in'])){
 		} else {
 			$_SESSION['error']= 'Name und Email bereits vergeben.';
 		}
+		}
+		else {
+			$_SESSION['error']= 'Name und Email sind leer.';
+		}
+		
 	}
 	if(isset($_SESSION['error']) && isset($_POST['tmp'])){
 			$tpl->assign( 'error',$_SESSION['error']);
