@@ -14,12 +14,12 @@ $(function() {
 						$('#divMail').hide();
 						$('#divShop').hide();
 						$('#divAllianz').hide();
-						$('td.description').hide();
+						//$('td.description').hide();
 						$('#divRanking').slideDown();
 
 						 
 
-						$('#rankingTable tr').hover(
+						/*$('#rankingTable tr').hover(
 						function()
 						{
 							
@@ -29,7 +29,7 @@ $(function() {
 						 function()
 						 {
 						 	$('#'+$(this).attr('id')+' td.description').fadeOut();
-						 });
+						 });*/
 
 					});
 
@@ -85,8 +85,10 @@ $(function() {
 					}
 
 					$('#rankingTable').append(data);
+
+					//$('td.description').hide();
 					
-					$('#rankingTable tr').hover(
+					/*$('#rankingTable tr').hover(
 						function()
 						{
 							
@@ -96,10 +98,11 @@ $(function() {
 						 function()
 						 {
 						 	$('#'+$(this).attr('id')+' td.description').fadeOut();
-						 });
+						 });*/
 					$('tr.'+pageNumber).hide();
 				
 					$('#pageNumber').html(upperBound);
+
 					$('tr.'+(upperBound)).show();
 					$('#backButton').show();
 					
