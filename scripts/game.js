@@ -47,6 +47,12 @@ function erstelleSpielfeld(){
 }
 
 function besetzeFeld(id){
+	var arr = zuegeMoeglich();
+	
+	if(arr.length == 0){
+	    verteilePunkte(0);
+		$('#game').trigger('click');
+	}
 	$('#' + id).addClass('kreuz');
 	$('#' + id).prop("disabled", true);
 	if(istSiegzustand()) {
@@ -62,6 +68,7 @@ function zugDerKI(){
 	
 	if(arr.length == 0){
 	    verteilePunkte(0);
+		$('#game').trigger('click');
 	}
 	
 	var zielfeld = arr[Math.floor((Math.random() * arr.length))];
@@ -160,7 +167,7 @@ function istSiegzustand(){
 	}
 
 	if($('#22').hasClass('kreis')){
-		if($('#11').hasClass('kreis') && $('#22').hasClass(kreis) && $('#33').hasClass('kreis')){
+		if($('#11').hasClass('kreis') && $('#22').hasClass('kreis') && $('#33').hasClass('kreis')){
 			return verteilePunkte(2);
 		}
 		if($('#31').hasClass('kreis') && $('#22').hasClass('kreis') && $('#13').hasClass('kreis')){
