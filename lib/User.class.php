@@ -75,6 +75,29 @@ class User{
 			return $row['Points'];
 		}
 		
+		public static function getMailsByID($id) {
+			$dbh = Database::getInstance();
+			$sth = $dbh->prepare('SELECT * FROM messages WHERE From_ID = :id OR To_ID = :id');
+			$sth->bindParam(':id', $id);
+			$sth->execute();
+			$row = $sth->fetchAll();
+			return $row;
+		}
+		
+		public static function sendMail($from, $to, $title, $text) {
+			$dbh = Database::getInstance();
+			$toID = self::getIDByInput($to);
+			
+			$sth = $dbh->prepare('INSERT INTO messages (From_ID, To_ID, Title, Text) VALUES (:from, :to, :title, :text)');
+			$sth->bindParam(':from', $from);
+			$sth->bindParam(':to', $toID);
+			$sth->bindParam(':title', $title);
+			$sth->bindParam(':text', $text);
+			$sth->execute();
+			return true;		
+			
+		}
+		
 		public static function changepassword($user,$password){
 			try {
 				$dbh = Database::getInstance();
